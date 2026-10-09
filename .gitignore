@@ -1,0 +1,20 @@
+# Convenience safeguards only: ignored files are NOT encrypted.
+.env
+.env.*
+!.env.example
+.private/
+private/
+personal/
+personal-data/
+local-notes/
+raw/
+exports/
+backups/
+*.secret.*
+*.private.*
+*.key
+*.pem
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
