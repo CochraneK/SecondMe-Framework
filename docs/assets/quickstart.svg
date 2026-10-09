@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="602" viewBox="0 0 1200 602" role="img">
+<rect x="0" y="0" width="1200" height="602" rx="22" fill="#F8FAF8" stroke="none"/>
+<text x="49" y="62" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#0B8068" font-weight="700" letter-spacing="2">03 / 从这里开始</text>
+<text x="49" y="120" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="37" fill="#173C35" font-weight="680" >从一件小事开始，而不是交出整个人生</text>
+<text x="49" y="160" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#6E8179" font-weight="400" >两条路径，同一原则：本人控制资料，模型可以随时被纠正。</text>
+<rect x="52" y="211" width="530" height="290" rx="18" fill="#FFFFFF" stroke="#DCE9E2"/>
+<rect x="613" y="211" width="535" height="290" rx="18" fill="#FFFFFF" stroke="#DCE9E2"/>
+<rect x="77" y="232" width="127" height="34" rx="8" fill="#E8F4EF" stroke="none"/>
+<text x="93" y="254" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#0B8068" font-weight="700" >路径 A · 立即体验</text>
+<text x="77" y="307" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="25" fill="#173C35" font-weight="650" >不需要 Git 或编程</text>
+<circle cx="90" cy="356" r="13" fill="#0B8068"/><text x="85" y="361" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FFF" font-weight="650" >1</text><text x="114" y="363" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#173C35" font-weight="400" >复制 SecondMe Lite 提示词</text>
+<circle cx="90" cy="404" r="13" fill="#0B8068"/><text x="85" y="409" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FFF" font-weight="650" >2</text><text x="114" y="411" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#173C35" font-weight="400" >讲述一件真实小事</text>
+<circle cx="90" cy="452" r="13" fill="#0B8068"/><text x="85" y="457" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FFF" font-weight="650" >3</text><text x="114" y="459" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#173C35" font-weight="400" >纠正、质疑或撤回推断</text>
+<rect x="639" y="232" width="150" height="34" rx="8" fill="#E8F4EF" stroke="none"/>
+<text x="655" y="254" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#0B8068" font-weight="700" >路径 B · 长期使用</text>
+<text x="639" y="307" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="25" fill="#173C35" font-weight="650" >建立属于自己的私有副本</text>
+<circle cx="652" cy="356" r="13" fill="#0B8068"/><text x="647" y="361" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FFF" font-weight="650" >1</text><text x="676" y="363" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#173C35" font-weight="400" >创建 Private 仓库</text>
+<circle cx="652" cy="404" r="13" fill="#0B8068"/><text x="647" y="409" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FFF" font-weight="650" >2</text><text x="676" y="411" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#173C35" font-weight="400" >自愿填写空白模板</text>
+<circle cx="652" cy="452" r="13" fill="#0B8068"/><text x="647" y="457" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FFF" font-weight="650" >3</text><text x="676" y="459" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#173C35" font-weight="400" >依据新证据定期修订</text>
+<rect x="52" y="529" width="1096" height="42" rx="10" fill="#E8F4EF" stroke="none"/>
+<text x="76" y="556" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#173C35" font-weight="550" >公开的是方法，不是人的资料。虚构示例不应进入个人记忆与画像。</text>
+</svg>

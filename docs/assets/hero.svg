@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="396" viewBox="0 0 1200 396" role="img">
+<defs>
+ <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123D34"/><stop offset="1" stop-color="#09251F"/></linearGradient>
+ <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop stop-color="#4ED4A7" stop-opacity=".18"/><stop offset="1" stop-color="#4ED4A7" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="0" y="0" width="1200" height="396" rx="22" fill="url(#hero)" stroke="none"/>
+<circle cx="900" cy="190" r="260" fill="url(#glow)"/>
+<path d="M40 343 H1160" fill="none" stroke="#2F594D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<text x="65" y="62" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#B8E5D1" font-weight="700" letter-spacing="3">SECONDME  /  OPEN FRAMEWORK</text>
+<text x="65" y="174" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="78" fill="#F7FFFB" font-weight="700" letter-spacing="-2">SecondMe</text>
+<text x="69" y="226" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="27" fill="#E7F5EF" font-weight="500" >认识自己，不把自己固定为标签。</text>
+<text x="69" y="272" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="18" fill="#AACCC0" font-weight="400" >自然对话  ·  证据驱动  ·  持续修正</text>
+<text x="69" y="371" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#80B7A4" font-weight="600" letter-spacing="2">v0.1  EXPERIMENTAL</text>
+<text x="370" y="371" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="12" fill="#80B7A4" font-weight="600" letter-spacing="2">PRIVACY FIRST</text>
+<path d="M880 55 C980 60 1095 120 1105 210 C1110 296 1000 343 888 332 C760 322 734 231 760 153 C774 111 822 66 880 55" fill="none" stroke="#4A8671" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 12" opacity=".48"/>
+<path d="M948 93 C1049 110 1060 198 1028 263 C985 348 854 318 817 248 C775 164 844 78 948 93" fill="none" stroke="#7DC7A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".56"/>
+<path d="M906 131 C967 118 1006 166 999 214 C992 271 919 293 876 254 C829 211 850 146 906 131" fill="none" stroke="#86E4BC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+<path d="M807 244 L879 201 L929 162 L1000 212 L1064 270" fill="none" stroke="#6CAB93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".64"/>
+<circle cx="807" cy="244" r="7" fill="#76D7B0"/><circle cx="879" cy="201" r="9" fill="#D4FFEA"/><circle cx="929" cy="162" r="8" fill="#8FE6BC"/><circle cx="1000" cy="212" r="11" fill="#D4FFEA"/><circle cx="1064" cy="270" r="6" fill="#7BD2AE"/>
+<circle cx="928" cy="207" r="22" fill="#10392F"/><circle cx="928" cy="207" r="6" fill="#E1FFED"/>
+<text x="875" y="365" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="11" fill="#A6D2C0" font-weight="600" letter-spacing="1.7">A MODEL THAT CAN CHANGE</text>
+</svg>
