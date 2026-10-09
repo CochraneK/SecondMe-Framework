@@ -17,7 +17,7 @@
   <a href="PRIVACY.md">隐私原则</a>
 </p>
 
-<p align="center"><sub>Experimental v0.2 · 中文优先 · MIT License · Privacy-first</sub></p>
+<p align="center"><sub>Experimental v0.3 · 中文优先 · MIT License · Privacy-first</sub></p>
 
 ---
 
@@ -66,6 +66,26 @@ SecondMe 希望做的，是把**生活中的真实材料**转化为**有来源�
 ![Human Ontology 中文分类：个体基础、价值与社会、行动与经历、自我与时间](docs/assets/dimensions.svg)
 
 **12 个维度是整理材料的分类地图，不是 12 个已验证、彼此独立的人格因子。** 可以交叉、留空，或随着理解加深而改变。详见 [Human Ontology](framework/human_ontology.md)。
+
+### 人人都有的 20 类生活专题入口
+
+理解一个人不能只谈人格理论。v0.3 开始，所有从 Template 新建的私人仓库也会得到**同一套完整的可选专题目录**：
+
+| 我想记录…… | 对应专题与空白模板 |
+|---|---|
+| **欣赏的老师、学者、公众人物** | [人物与角色卡](templates/PEOPLE_CHARACTERS_TEMPLATE.md) |
+| **最喜欢的小说、影视、游戏角色** | [人物与角色卡](templates/PEOPLE_CHARACTERS_TEMPLATE.md) |
+| **价值、个人金句、喜欢什么** | [价值语句](templates/VALUES_QUOTES_TEMPLATE.md) · [偏好](templates/PREFERENCE_TEMPLATE.md) |
+| **家人、朋友、亲密关系、同事** | [关系记录](templates/RELATIONSHIP_TEMPLATE.md) |
+| **人生时间线、重要选择与反思** | [时间线](templates/TIMELINE_TEMPLATE.md) · [决策](templates/DECISION_TEMPLATE.md) |
+| **阅读、音乐、电影、游戏、旅行** | [文化与兴趣](templates/CULTURE_MEDIA_TEMPLATE.md) · [经历](templates/EXPERIENCE_TEMPLATE.md) |
+| **自己的创作、命名、故事、梦境** | [创作与命名](templates/CREATIVE_LEXICON_TEMPLATE.md) · [梦境](templates/DREAM_TEMPLATE.md) |
+| **Idea、项目、普通快乐、休息** | [想法与承诺](templates/IDEAS_PROJECTS_TEMPLATE.md) · [日常生活](templates/DAILY_LIFE_TEMPLATE.md) |
+
+**[打开 20 类生活专题地图 →](framework/personal_domains.md)** · **[打开通用专题导航模板 →](templates/DOMAIN_INDEX_TEMPLATE.md)**
+
+这些是「生活资料的可选专题」，**不是另外 20 种人格因子**。所有人拥有相同的空白容器，但每个人收藏的人物、喜欢的角色、经历和决定均来自自己；`EMPTY` 不代表该人缺少这一面。
+
 
 ## 方法与理论
 
@@ -132,12 +152,12 @@ SecondMe 希望做的，是把**生活中的真实材料**转化为**有来源�
 ```text
 SecondMe-Framework/
 ├── prompts/       自然对话与回顾提示词
-├── framework/     维度、证据、理论选择、更新与主体性
-├── templates/     个人模型、经历、决策与复盘空白模板
+├── framework/     12维本体 + 20类生活专题、证据、方法与更新
+├── templates/     个人、角色、偏好、关系、文化、梦境、决策等空白模板
 ├── examples/      独立虚构的教学材料（非个人记忆）
 ├── docs/assets/   中文 SVG 框架图及视觉素材
 ├── docs/        首次使用指南、更新协议与框架演化规则
-├── my/           私人记录的空白使用说明（模板文件）
+├── my/           20类空白私人导航与使用说明（无真实个人数据）
 ├── custom/       个性化提示词的空白使用说明
 ├── scripts/      安全更新器与发布清单工具
 ├── .secondme/    官方版本清单与文件指纹
@@ -156,7 +176,7 @@ SecondMe-Framework/
 
 这个仓库**不承载真实的 SecondMe 个人档案**。请勿通过公开 Issue、PR 或示例提交真实聊天、健康资料、亲密关系记录或改名后的真实案例。详见 [PRIVACY.md](PRIVACY.md) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-当前 **v0.2** 提供了提示词、方法文档、空白模板、虚构教学示例，以及可选的框架版本检查与更新 PR；**尚未实现**自动跨会话记忆、数据库、可视化交互界面、正式测量或数字人运行时。后续想法见 [ROADMAP.md](ROADMAP.md)。
+当前 **v0.3** 提供了 12 维本体、20 类生活专题、提示词、方法文档、空白模板、虚构教学示例，以及可选的框架版本检查与更新 PR；**尚未实现**自动跨会话记忆、数据库、可视化交互界面、正式测量或数字人运行时。后续想法见 [ROADMAP.md](ROADMAP.md)。
 
 ---
 

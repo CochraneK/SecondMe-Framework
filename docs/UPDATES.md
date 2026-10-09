@@ -4,6 +4,12 @@
 
 **第一次使用？** 先按 [从零开始指南](START_HERE.md) 创建 Private 仓库、保存记录，再选择是否开启 Actions。Updater 仅是可选的**官方 Markdown 更新提案**功能，不是自动记忆系统。
 
+## 新增生活专题如何同步（v0.3）
+
+Framework v0.3 增加了官方 `framework/personal_domains.md`、`templates/DOMAIN_INDEX_TEMPLATE.md` 和一组可选专题模板。这些在 Updater 的**官方 Markdown 白名单**内，已有私人副本可选择在更新 PR 中采纳。
+
+**不会自动触碰 `my/`：** 新模板副本自带的 `my/INDEX.md` 是个人导航的初始空白示例，它属于个人自定义区域，旧用户不会被强制创建、改写或覆盖。旧用户可手动将 [专题导航模板](../templates/DOMAIN_INDEX_TEMPLATE.md) 的项目合并到自己的私人索引。
+
 ## 一句话原理
 
 你只需要创建一次私人仓库。之后当公开 SecondMe-Framework 发布新版，私人仓库可以**定期检查**，并提出一个待你人工审核的 Pull Request（PR）。
