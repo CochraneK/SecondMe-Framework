@@ -21,6 +21,18 @@
 
 ---
 
+## 60 秒开始
+
+| 你的目标 | 推荐入口 |
+| --- | --- |
+| **先试着和 AI 了解自己** | [复制自然对话提示词](prompts/secondme-lite.md)，从一件具体小事聊起 |
+| **建立长期个人档案** | [Use this template 创建自己的 Private 仓库](https://github.com/CochraneK/Secondme-Framework/generate)，在 `my/` 保存本人资料，`custom/` 保存个性化提示词 |
+| **今后获得新方法** | 在私人仓库启用可选的框架更新工作流，查看并合并更新 PR；不自动覆盖个人资料 |
+
+**第一次使用 GitHub？请按 [中文入门指南（从零开始）](docs/START_HERE.md) 操作。** 它详细说明如何确认仓库为 Private、保存记录、启用更新及处理失败。
+
+<sub>当前项目是方法与文件模板，尚未提供自动跨会话记忆、自动读取私人仓库或自动创建人物模型的完整运行服务。</sub>
+
 ## 为什么是 SecondMe？
 
 我们会改变。一次测试、一段聊天或一个人格标签，都不足以概括一个真实的人。
@@ -90,9 +102,9 @@ SecondMe 希望做的，是把**生活中的真实材料**转化为**有来源�
 
 **路径 B · 建立长期私有模型**
 
-1. 创建自己的 **Private** 仓库，用本项目的 [空白模板](templates/) 作为起点。如果 GitHub 页面显示 **Use this template**，可直接从模板创建；否则需要由维护者启用该仓库选项。
-2. 只记录你愿意保存的内容。私有仓库不等于本地加密，涉及健康、关系等敏感材料时应进一步最小化。
-3. 用 [阶段复盘提示词](prompts/review.md) 根据新经历调整旧认识，不让 AI 擅自增加人生任务。
+1. 使用 [Use this template](https://github.com/CochraneK/Secondme-Framework/generate) 创建新的 **Private** 仓库。你不需要 Fork，也不需要复制任何私人历史。
+2. 将 [空白模板](templates/) 复制到 `my/` 后自愿填写；个人化提示词放在 `custom/`，不要修改官方原件。私有仓库不等于本地加密，涉及健康、关系等敏感材料时应进一步最小化。
+3. 用 [阶段复盘提示词](prompts/review.md) 根据新经历调整旧认识，不让 AI 擅自增加人生任务。详细点击步骤见 [第一次使用指南](docs/START_HERE.md)。
 
 ## 框架更新：不覆盖私人资料
 
@@ -124,7 +136,9 @@ SecondMe-Framework/
 ├── templates/     个人模型、经历、决策与复盘空白模板
 ├── examples/      独立虚构的教学材料（非个人记忆）
 ├── docs/assets/   中文 SVG 框架图及视觉素材
-├── docs/UPDATES.md 框架更新说明与权限配置
+├── docs/        首次使用指南、更新协议与框架演化规则
+├── my/           私人记录的空白使用说明（模板文件）
+├── custom/       个性化提示词的空白使用说明
 ├── scripts/      安全更新器与发布清单工具
 ├── .secondme/    官方版本清单与文件指纹
 ├── .github/      提议更新 PR 的可选工作流

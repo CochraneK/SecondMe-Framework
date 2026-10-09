@@ -2,6 +2,8 @@
 
 **版本：v0.2 · 面向通过模板创建的私人 SecondMe 仓库。**
 
+**第一次使用？** 先按 [从零开始指南](START_HERE.md) 创建 Private 仓库、保存记录，再选择是否开启 Actions。Updater 仅是可选的**官方 Markdown 更新提案**功能，不是自动记忆系统。
+
 ## 一句话原理
 
 你只需要创建一次私人仓库。之后当公开 SecondMe-Framework 发布新版，私人仓库可以**定期检查**，并提出一个待你人工审核的 Pull Request（PR）。
@@ -26,14 +28,22 @@
 
 ## 朋友第一次使用（推荐）
 
-1. 在公开仓库选择 **Use this template → Create a new repository**，将新仓库设为 **Private**。必须先由维护者开启 Template repository。
+1. 在公开仓库点击 [Use this template](https://github.com/CochraneK/Secondme-Framework/generate)，创建新的 **Private** 仓库。当前上游已启用 Template repository。
 2. 在私人副本中选 **Actions** 并启用工作流（如果 GitHub 有提示）。
 3. 进入私人仓库 **Settings → Actions → General → Workflow permissions**，允许合适的 `GITHUB_TOKEN` 权限；如果界面提供 **Allow GitHub Actions to create and approve pull requests**，也需要允许创建 PR。
 4. 在 Actions 中找到 **SecondMe · 安全检查框架更新**，点击 **Run workflow** 进行首次手动检测。
-5. 以后默认每周一 03:17 UTC 检查一次。如发现上游版本变化，它会在*你的私人仓库内部*创建一个待审核 PR。
+5. 以后默认每周一 03:17 UTC（北京时间周一 11:17）检查一次。只有出现可应用的新版本和具有适当权限时，它才会在**你的私人仓库内部**创建一个待审核 PR。
 6. 合并前查看 PR 的差异，确认新内容适合自己；你也可以拒绝更新或继续使用旧版。
 
 > **如果 GitHub 阻止 Actions 创建 PR**：工作流不会直接合并；若已推送更新分支，可手动从该分支创建 PR。查看 Actions 日志即可找到分支名。
+
+## GitHub Actions 访问范围
+
+最新模板的自动更新工作流使用 **sparse checkout + 部分 Blob 获取**，只检出需要对比的 `framework/`、`prompts/`、`templates/`、`.secondme/`、更新脚本与离线测试，避免把 `my/`、`custom/` 等私人内容完整检出到运行工作区。
+
+但是，GitHub Actions 仍是第三方云端执行环境；Git 元数据和其他仓库权限仍由 GitHub 负责，**不能将稀疏检出等同于加密、离线处理或零数据接触保证**。如果不愿意在云端运行，可关闭 Actions，只在自己的设备上手动执行 Updater。
+
+此优化只适用于包含该工作流的新模板副本；旧副本的工作流不会通过官方 Markdown 更新器自动替换，需要各自主动审核升级。
 
 ## 三方隔离
 
