@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "source": "CochraneK/Secondme-Framework",
+  "version": "0.2.0",
+  "files": {
+    "framework/agency_and_external_advisors.md": "d6fefca66e10be9a3f61ab5ae8cd00547796fc99",
+    "framework/evidence_protocol.md": "d58a2015b191fa76c55d05003903316a72e2016b",
+    "framework/human_ontology.md": "2c1a9e3341fd48315a14ef2ad5c992a37842ebb7",
+    "framework/method_router.md": "08877acae0a52bc2d71f68d88f33f6182f74f098",
+    "framework/model_update.md": "ce22bdb76c43f4de40d173dc2d1d56f446901dd6",
+    "prompts/review.md": "a133d904bb7ca187c67df1536be6b5e0a5cbf3f3",
+    "prompts/secondme-lite.md": "b34cccdebd3d4f3eac4ba520f9cf50fa851574c3",
+    "templates/DECISION_TEMPLATE.md": "bcbd41c64f9443fdae5d14377c872d189c0b2202",
+    "templates/EXPERIENCE_TEMPLATE.md": "ffa5fed3741e0eb02b71cfdfd8d7d4d0f7932d6c",
+    "templates/REVIEW_TEMPLATE.md": "cec79d2159aa88f942fde5a1219a2f46677e3af3",
+    "templates/SELF_TEMPLATE.md": "cd6839f658f86a36a7312a314a12a19539335de3"
+  }
+}

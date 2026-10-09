@@ -17,7 +17,7 @@
   <a href="PRIVACY.md">隐私原则</a>
 </p>
 
-<p align="center"><sub>Experimental v0.1 · 中文优先 · MIT License · Privacy-first</sub></p>
+<p align="center"><sub>Experimental v0.2 · 中文优先 · MIT License · Privacy-first</sub></p>
 
 ---
 
@@ -90,9 +90,22 @@ SecondMe 希望做的，是把**生活中的真实材料**转化为**有来源�
 
 **路径 B · 建立长期私有模型**
 
-1. 创建自己的 **Private** 仓库，用本项目的 [空白模板](templates/) 作为起点。若本仓库已开启 **Use this template** 功能，可直接从模板创建。
+1. 创建自己的 **Private** 仓库，用本项目的 [空白模板](templates/) 作为起点。如果 GitHub 页面显示 **Use this template**，可直接从模板创建；否则需要由维护者启用该仓库选项。
 2. 只记录你愿意保存的内容。私有仓库不等于本地加密，涉及健康、关系等敏感材料时应进一步最小化。
 3. 用 [阶段复盘提示词](prompts/review.md) 根据新经历调整旧认识，不让 AI 擅自增加人生任务。
+
+## 框架更新：不覆盖私人资料
+
+朋友通过模板创建自己的私有 SecondMe 后，并不具备 GitHub 原生的 Fork 同步功能。因此 v0.2 加入了 **[SecondMe Updater](docs/UPDATES.md)**：
+
+- **定期或手动检查**公开框架的新版本；
+- 只选择性更新 `framework/`、`prompts/`、`templates/` 中未经用户修改的官方 Markdown；
+- 遇到已修改文件就**跳过并报告冲突**，个人资料、个性化设置、示例及可执行脚本不自动同步；
+- 在使用者的**私人仓库**内生成待审核 Pull Request，**不会自动合并**。
+
+`my/` 可用于私人仓库中自愿版本管理的个人资料，`custom/` 用于定制。需要离线保留的内容可自行放进 `.private/`（已列入 Git 忽略规则）。**Private GitHub 仓库仍是云端服务，不代表端到端加密。**
+
+> 更新器当前基线是 **v0.2.0**；这是已经提供的更新机制，不代表已有待升级的新版本。使用前需要仓库启用 GitHub Actions 及适当的 PR 权限。[查看安装与权限说明 →](docs/UPDATES.md)
 
 ## 项目结构
 
@@ -103,6 +116,11 @@ SecondMe-Framework/
 ├── templates/     个人模型、经历、决策与复盘空白模板
 ├── examples/      独立虚构的教学材料（非个人记忆）
 ├── docs/assets/   中文 SVG 框架图及视觉素材
+├── docs/UPDATES.md 框架更新说明与权限配置
+├── scripts/      安全更新器与发布清单工具
+├── .secondme/    官方版本清单与文件指纹
+├── .github/      提议更新 PR 的可选工作流
+├── tests/        防覆盖与路径安全的离线测试
 ├── PRIVACY.md     隐私与脱敏边界
 ├── CONTRIBUTING.md
 └── ROADMAP.md
@@ -116,7 +134,7 @@ SecondMe-Framework/
 
 这个仓库**不承载真实的 SecondMe 个人档案**。请勿通过公开 Issue、PR 或示例提交真实聊天、健康资料、亲密关系记录或改名后的真实案例。详见 [PRIVACY.md](PRIVACY.md) 和 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-当前 v0.1 仅包含提示词、方法文档、空白模板和虚构教学案例；**尚未实现**自动跨会话记忆、数据库、可视化交互界面、正式测量或数字人运行时。后续想法见 [ROADMAP.md](ROADMAP.md)。
+当前 **v0.2** 提供了提示词、方法文档、空白模板、虚构教学示例，以及可选的框架版本检查与更新 PR；**尚未实现**自动跨会话记忆、数据库、可视化交互界面、正式测量或数字人运行时。后续想法见 [ROADMAP.md](ROADMAP.md)。
 
 ---
 

@@ -1,0 +1,28 @@
+name: SecondMe · 更新器自检
+
+on:
+  push:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/**"
+      - ".secondme/**"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/**"
+      - ".secondme/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Run offline no-overwrite tests
+        run: python3 -m unittest discover -s tests -v

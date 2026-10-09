@@ -1,0 +1,94 @@
+# Runs in repositories created from this template, not in its upstream source.
+name: SecondMe · 安全检查框架更新
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: secondme-framework-updates
+  cancel-in-progress: false
+
+jobs:
+  propose-framework-update:
+    if: github.repository != 'CochraneK/Secondme-Framework'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout private personal repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: true
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Verify updater guardrails (offline)
+        shell: bash
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Prepare safe framework updates
+        id: prepare
+        shell: bash
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          set -euo pipefail
+          python3 scripts/secondme_updater.py \
+            --apply \
+            --report "$RUNNER_TEMP/secondme-pr.md" \
+            --stage-paths "$RUNNER_TEMP/secondme-stage-paths"
+
+          # Stage ONLY exact paths emitted by the validated updater.
+          # NEVER stage a whole directory or untracked personal files.
+          if [[ -s "$RUNNER_TEMP/secondme-stage-paths" ]]; then
+            git add --pathspec-from-file="$RUNNER_TEMP/secondme-stage-paths" --pathspec-file-nul
+          fi
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "没有需要提交的框架更新。" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            cat "$RUNNER_TEMP/secondme-pr.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Open reviewable PR in this personal repository
+        if: steps.prepare.outputs.has_changes == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          base="$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')"
+
+          # Avoid overwriting a branch while the user reviews its PR.
+          existing="$(gh pr list --state open --base "$base" --json headRefName \
+            --jq '[.[].headRefName | select(startswith("secondme-updater/"))] | length')"
+          if [[ "$existing" != "0" ]]; then
+            echo "已有待审核的 SecondMe 更新 PR；本轮不覆盖或重建。" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          branch="secondme-updater/update-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git commit -m "chore(secondme): propose a reviewed framework update"
+          git push origin "HEAD:refs/heads/$branch"
+
+          if ! gh pr create \
+            --base "$base" \
+            --head "$branch" \
+            --title "SecondMe Framework · 可选更新（请审核）" \
+            --body-file "$RUNNER_TEMP/secondme-pr.md"; then
+            {
+              echo "创建 PR 失败，但独立更新分支已推送。"
+              echo "请检查 Settings → Actions → General 中 workflow permissions"
+              echo "以及 Allow GitHub Actions to create and approve pull requests。"
+              echo "然后从分支 $branch 手动创建 PR。"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
